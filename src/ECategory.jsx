@@ -52,17 +52,22 @@ class ECategory extends Component {
                     <Select
                         styles={{
                             // Fixes the overlapping problem of the component
-                            menu: provided => ({ ...provided, zIndex: 10 })
+                            menu: provided => ({ ...provided, zIndex: 10 }),
                         }}
                         value={selectedOption}
                         onChange={this.handleChange}
                         options={catOptions}
+                        isSearchable={false}
                     />
+
+                    <Divider hidden />
+
+                    {selectedOption ? (
+                        <EGrids content={emojiInCategoty.catEmojiList[selectedOption.value]} />
+                    ) : null}
+
                 </Container>
 
-                { selectedOption ? (
-                    <EGrids content={emojiInCategoty.catEmojiList[selectedOption.value]} />
-                ) : null}
 
             </Segment>
         );

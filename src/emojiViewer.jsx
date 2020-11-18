@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as emojiDetails from './data/emojiDetails.json';
+import * as emojiDetails from './data/emojiDetailsImages-4.json.json';
 import Select from "react-select";
 
 const emojiData = emojiDetails.emojiDetailList

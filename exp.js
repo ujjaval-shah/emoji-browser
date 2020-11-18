@@ -1,10 +1,10 @@
-// const emojiDetails = require('./src/data/emojiDetailsImages-2.json')
+// const emojiDetails = require('./src/data/emojiDetailsImages-4.json')
 const emojiInCategoty = require('./src/data/emojisInCategory.json')
 
-const catOptions = emojiInCategoty.catEmojiList.map((item, index) => ({ value: index, label: item.category }))
-console.log(catOptions)
+// const catOptions = emojiInCategoty.catEmojiList.map((item, index) => ({ value: index, label: item.category }))
+// console.log(catOptions)
 
-console.log(emojiInCategoty.catEmojiList[7])
+console.log(random_emoji(emojiInCategoty))
 
 // console.log(emojiDetails.emojiDetailList[0].shortcodes[0].code.slice(1, -1))
 
@@ -12,23 +12,17 @@ console.log(emojiInCategoty.catEmojiList[7])
 
 // const nav = ['home', 'categories', 'surprise me']
 
+// A function to get a random item from a given list
+function random_item(items) {
+    // console.log(items)
+    return items[Math.floor(Math.random() * items.length)];
+}
 
-// -- -- readline -- --
-
-// const readline = require("readline");
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
-
-// rl.question("What is your name ? ", function(name) {
-//     rl.question("Where do you live ? ", function(country) {
-//         console.log(`${name}, is a citizen of ${country}`);
-//         rl.close();
-//     });
-// });
-
-// rl.on("close", function() {
-//     console.log("\nBYE BYE !!!");
-//     process.exit(0);
-// });
+// A function to get a random emoji, given json_data: emojiInCategory
+function random_emoji(json_data) {
+    const catObj = random_item(json_data.catEmojiList)
+    // console.log(catObj.category)
+    const emObj = random_item(catObj.emojiList)
+    // console.log(emObj)
+    return (emObj)
+}

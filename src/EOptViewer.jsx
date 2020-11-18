@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as emojiDetails from './data/emojiDetailsImages-2.json';
+import * as emojiDetails from './data/emojiDetailsImages-4.json';
 import Select from "react-select";
 import EDetails from './EDetails'
 import { FixedSizeList as List } from "react-window";

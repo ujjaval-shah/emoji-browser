@@ -15,6 +15,7 @@ import EmojiPage from './EmojiPage';
 import ESearch from './ESearch';
 import EApi from './EApi';
 import EAbout from './EAbout';
+import SurpriseMe from './SurpriseMe';
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 					<Route path="/search" component={ESearch} />
 					<Route path="/api" component={EApi} />
 					<Route path="/about" component={EAbout} />
+					<Route path="/surprise-me" component={SurpriseMe} />
 					<Route path="/:id" children={<EmojiPage />} />
 				</Switch>
 			</Router>

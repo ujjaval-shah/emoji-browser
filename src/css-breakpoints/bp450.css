@@ -1,0 +1,11 @@
+@media only screen and (min-width: 450px) {
+    .eGrid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-auto-rows: 80px;
+    }
+
+    .grid-element {
+        font-size: 20px;
+    }
+
+}

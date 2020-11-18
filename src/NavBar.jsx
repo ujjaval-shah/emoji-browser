@@ -59,12 +59,12 @@ function NavBar(props) {
                     </Menu.Item>
 
                     <Menu.Item as={Link}
-                        name='api'
+                        name='surprise-me'
                         // active={activeItem === 'api'}
-                        to='/api'
+                        to='/surprise-me'
                         color='blue'
                     >
-                        API
+                        Surprise Me
                     </Menu.Item>
 
                     <Menu.Item as={Link}

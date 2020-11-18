@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as emojiDetails from './data/emojiDetailsImages-3.json';
+import * as emojiDetails from './data/emojiDetailsImages-4.json';
 import Select from "react-select";
 import { Container, Divider, Header, Segment } from 'semantic-ui-react';
 import { FixedSizeList as List } from "react-window";

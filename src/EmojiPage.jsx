@@ -1,6 +1,6 @@
 import React from 'react';
 // import EViewer from './EViewer';
-import * as emojiDetails from './data/emojiDetailsImages-3.json';
+import * as emojiDetails from './data/emojiDetailsImages-4.json';
 import { useParams } from 'react-router-dom';
 import EDetails from './EDetails';
 

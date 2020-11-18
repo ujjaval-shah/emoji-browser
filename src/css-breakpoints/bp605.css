@@ -16,4 +16,10 @@
     span#title-emoji {
         font-size: 60px;
     }
+
+    h1.ui.header.main-head {
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+
 }

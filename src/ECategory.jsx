@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Select from 'react-select';
 import { Container, Segment, Header, Divider } from 'semantic-ui-react';
 import emojiInCategoty from './data/emojisInCategory.json'
@@ -42,6 +43,8 @@ class ECategory extends Component {
     render() {
         const { selectedOption } = this.state;
 
+        window.scrollTo(0, 0)
+
         return (
             <Segment vertical className="stripe">
                 <Container text>
@@ -74,7 +77,7 @@ class ECategory extends Component {
     }
 }
 
-export default ECategory;
+export default withRouter(ECategory);
 
 
 // const emojiInCategoty = require('./src/data/emojisInCategory.json')

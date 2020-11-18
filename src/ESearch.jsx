@@ -3,6 +3,7 @@ import * as emojiDetails from './data/emojiDetailsImages-4.json';
 import Select from "react-select";
 import { Container, Divider, Header, Segment } from 'semantic-ui-react';
 import { FixedSizeList as List } from "react-window";
+import { withRouter } from 'react-router-dom';
 
 
 let emojiData = []
@@ -55,6 +56,7 @@ class ESearch extends Component {
 
     render() {
 
+        window.scrollTo(0, 0)
         const { selectedOption } = this.state;
 
         return (
@@ -77,4 +79,4 @@ class ESearch extends Component {
     }
 }
 
-export default ESearch;
+export default withRouter(ESearch);

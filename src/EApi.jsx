@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Container, Segment } from 'semantic-ui-react';
 
 class EApi extends Component {
@@ -15,4 +16,4 @@ class EApi extends Component {
     }
 }
 
-export default EApi;
+export default withRouter(EApi);

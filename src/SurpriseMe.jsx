@@ -1,6 +1,7 @@
 import emojiInCategoty from './data/emojisInCategory.json'
 import React, { Component } from 'react';
-import { Container, Segment } from 'semantic-ui-react';
+import { Container, Divider, Header, Segment } from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
 
 // A function to get a random item from a given list
 function random_item(items) {
@@ -25,20 +26,27 @@ class SurpriseMe extends Component {
 
         console.log(emojiObj)
 
-        this.props.history.push({
-            pathname: `${emojiObj.url}`
-        })
+        setTimeout(() => {
+            this.props.history.push({
+                pathname: `${emojiObj.url}`
+            })
+        }, 2000);
 
     }
 
     render() {
+
+        window.scrollTo(0, 0)
+
         return (
             <Segment vertical className="stripe">
                 <Container text>
+                    <Header as='h2'> You will be soon redirected to a random emoji... </Header>
+                    <Divider hidden></Divider>
                 </Container>
             </Segment>
         );
     }
 }
 
-export default SurpriseMe;
+export default withRouter(SurpriseMe);

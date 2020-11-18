@@ -13,17 +13,17 @@ function EDetails(props) {
             <Container text textAlign='left' key={props.emojiOb.id}>
                 <h1> {props.emojiOb.emoji} - {props.emojiOb.title} </h1>
 
-                <div class="ui hidden divider"></div>
+                <div className="ui hidden divider"></div>
 
                 <EDescription content={props.emojiOb.description} />
 
-                <div class="ui section divider"></div>
+                <div className="ui section divider"></div>
 
 
                 {props.emojiOb.aliases.length !== 0 ? (
                     <>
                         <ListItems title="Aliases" divID="aliases" lst={props.emojiOb.aliases} />
-                        <div class="ui section divider"></div>
+                        <div className="ui section divider"></div>
                     </>
                 ) : null}
 
@@ -31,16 +31,16 @@ function EDetails(props) {
                 <EUnicodes title="Unicode" divID="unicodes" lst={props.emojiOb.codepoints} />
 
 
-                <div class="ui section divider"></div>
+                <div className="ui section divider"></div>
 
 
                 <EShortCodes shortcodes={props.emojiOb.shortcodes} />
-                <div class="ui section divider"></div>
+                <div className="ui section divider"></div>
 
 
                 <Header as='h3'> Appearance </Header>
                 <Images content={props.emojiOb.images} />
-                <div class="ui section divider"></div>
+                <div className="ui section divider"></div>
 
 
                 <Header as='h3'> See Also </Header>

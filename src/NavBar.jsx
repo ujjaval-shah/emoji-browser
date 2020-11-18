@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 // import { useState } from 'react';
 import { Header, Segment, Menu, Container } from 'semantic-ui-react'
 
 function NavBar(props) {
 
-    // const [activeItem, setActiveItem] = useState('home')
+    console.log(props)
 
     const handleItemClick = (e, { name }) => {
         // setActiveItem(name)
@@ -17,7 +17,7 @@ function NavBar(props) {
 
 
     return (
-        < Segment inverted>
+        < Segment inverted id="banner">
             <Header as='h1' inverted color="teal" className='main-head'>
                 <span id="title-emoji"> Emoji</span><span id="title-wiki">-wiki </span>
             </Header>
@@ -31,17 +31,17 @@ function NavBar(props) {
                 >
                     <Menu.Item as={Link}
                         name='home'
-                        // active={activeItem === 'home'}
+                        active={props.activeTab === 'home'}
                         onClick={handleItemClick}
                         to='/'
                         color='blue'
                     >
-                        <i class="home icon"></i>
+                        <i className="home icon"></i>
                     </Menu.Item>
 
                     <Menu.Item as={Link}
-                        name='categories'
-                        // active={activeItem === 'categories'}
+                        name='category'
+                        active={props.activeTab === 'category'}
                         to='/category'
                         color='blue'
                     >
@@ -51,7 +51,7 @@ function NavBar(props) {
 
                     <Menu.Item as={Link}
                         name='search'
-                        // active={activeItem === 'search'}
+                        active={props.activeTab === 'search'}
                         to='/search'
                         color='blue'
                     >
@@ -60,7 +60,7 @@ function NavBar(props) {
 
                     <Menu.Item as={Link}
                         name='surprise-me'
-                        // active={activeItem === 'api'}
+                        active={props.activeTab === 'surprise-me'}
                         to='/surprise-me'
                         color='blue'
                     >
@@ -69,7 +69,7 @@ function NavBar(props) {
 
                     <Menu.Item as={Link}
                         name='about'
-                        // active={activeItem === 'about'}
+                        active={props.activeTab === 'about'}
                         to='/about'
                         color='blue'
                     >
@@ -81,4 +81,4 @@ function NavBar(props) {
         </Segment >)
 }
 
-export default NavBar;
+export default withRouter(NavBar);

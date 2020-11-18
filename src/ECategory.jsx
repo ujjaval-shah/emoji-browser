@@ -63,7 +63,7 @@ class ECategory extends Component {
                     <Divider hidden />
 
                     {selectedOption ? (
-                        <EGrids content={emojiInCategoty.catEmojiList[selectedOption.value]} />
+                        <EGrids content={emojiInCategoty.catEmojiList[selectedOption.value].emojiList} />
                     ) : null}
 
                 </Container>

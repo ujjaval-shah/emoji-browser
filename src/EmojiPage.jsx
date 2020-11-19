@@ -3,6 +3,7 @@ import React from 'react';
 import * as emojiDetails from './data/emojiDetailsImages-4.json';
 import { useParams, withRouter } from 'react-router-dom';
 import EDetails from './EDetails';
+import E404 from './E404';
 
 let emojiData = []
 
@@ -14,9 +15,15 @@ function EmojiPage() {
 
     window.scrollTo(0, 0)
 
-    return (
-        <> <EDetails emojiOb={emojiObj} /> </>
-    );
+    if (emojiObj) {
+        return (
+            <EDetails emojiOb={emojiObj} />
+        );
+    } else {
+        return (
+            <E404 />
+        )
+    }
 }
 
 export default withRouter(EmojiPage);

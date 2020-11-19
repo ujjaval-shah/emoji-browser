@@ -11,7 +11,7 @@ function EDetails(props) {
     return (
         <Segment vertical className="stripe">
             <Container text textAlign='left' key={props.emojiOb.id}>
-                <h1> {props.emojiOb.emoji} - {props.emojiOb.title} </h1>
+                <Header block as='h1'> {props.emojiOb.emoji} - {props.emojiOb.title} </Header>
 
                 <div className="ui hidden divider"></div>
 

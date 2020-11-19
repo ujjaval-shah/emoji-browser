@@ -10,8 +10,8 @@ function ListItems(props) {
 
             <List relaxed>
                 {props.lst.map(
-                    item => (
-                        <List.Item>
+                    (item, index) => (
+                        <List.Item key={index}>
                             <Icon name='smile outline' className='small middle aligned'></Icon>
                             <List.Content>
                                 {item}

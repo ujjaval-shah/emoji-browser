@@ -20,9 +20,9 @@ class EAbout extends Component {
                         href="https://github.com/ujjaval-shah/Web-scraping-Emojipedia"
                     > <Icon name='github square' size='big' /> </a> </Header>
                     <p> Details about each Emoji is web-scraped with Python3 using BeautifulSoup4. </p>
-                    <p>
+                    <div>
                         {techData.map(item => (<Label> {item} </Label>))}
-                    </p>
+                    </div>
 
                     <Divider />
 
@@ -30,9 +30,9 @@ class EAbout extends Component {
                         href="https://github.com/ujjaval-shah/emoji-browser"
                     ><Icon name='github square' size='big' /> </a> </Header>
                     <p> Made in React. Stylized with Semantic UI. </p>
-                    <p>
+                    <div>
                         {techUi.map(item => (<Label> {item} </Label>))}
-                    </p>
+                    </div>
 
                 </Container>
             </Segment>

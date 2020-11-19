@@ -6,9 +6,9 @@ function EShortCodes(props) {
         <div>
             <Header as='h3' className="subhead"> Shortcodes </Header>
             <List relaxed>
-                {props.shortcodes.map((item) =>
+                {props.shortcodes.map((item, index) =>
                     (
-                        <List.Item>
+                        <List.Item key={index}>
                             <Icon name='smile outline' className='small middle aligned'></Icon>
                             <List.Content>
                                 <highlight>{item.code}</highlight> - {item.platforms.join(", ")}

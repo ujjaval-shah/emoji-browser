@@ -5,7 +5,7 @@ function EDescription(props) {
     return (
         <>
             <Header as='h3' className="subhead"> Meaning </Header>
-            {props.content.map((item) => <p> {item} </p>)}
+            {props.content.map((item, index) => <p key={index}> {item} </p>)}
 
         </>
     );

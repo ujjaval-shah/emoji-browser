@@ -10,7 +10,7 @@ function EGrids(props) {
     return (
         <div className="eGrid">
 
-            {props.content.map((item) => <div className="grid-element">
+            {props.content.map((item) => <div className="grid-element" key={item.url}>
                 <Link className="bn39" to={item.url}>
                     <span className="bn39span">  {item.emoji} </span>
                 </Link>

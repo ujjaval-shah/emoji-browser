@@ -4,8 +4,9 @@ import ListItems from './ListItems'
 import EShortCodes from './EShortCodes'
 import Images from './Images'
 import EUnicodes from './EUnicodes';
-import EGrids from './EGrids'
+// import EGrids from './EGrids'
 import { Container, Header, Segment } from 'semantic-ui-react';
+import ESeeAlso from './ESeeAlso';
 
 function EDetails(props) {
     return (
@@ -42,9 +43,10 @@ function EDetails(props) {
                 <Images content={props.emojiOb.images} />
                 <div className="ui section divider"></div>
 
+                <ESeeAlso content={props.emojiOb.seeAlso} />
 
-                <Header as='h3'> See Also </Header>
-                <EGrids content={props.emojiOb.seeAlso} />
+                {/* <Header as='h3'> See Also </Header>
+                <EGrids content={props.emojiOb.seeAlso} /> */}
 
             </Container >
         </Segment>
